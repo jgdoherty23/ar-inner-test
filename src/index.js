@@ -1,4 +1,6 @@
 import * as THREE from 'three';
+var OrbitControls = require('three-orbit-controls')(THREE)
+
 
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -14,11 +16,15 @@ scene.add( cube );
 
 camera.position.z = 5;
 
+var controls = new OrbitControls(camera, renderer.domElement);
+
 var animate = function () {
 	requestAnimationFrame( animate );
 
 	cube.rotation.x += 0.01;
 	cube.rotation.y += 0.01;
+
+	controls.update();
 
 	renderer.render( scene, camera );
 };
