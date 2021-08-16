@@ -1,23 +1,9 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+var path = require("path");
 
 module.exports = {
-    module: {
-        rules: [
-            {
-                test: /\.html$/,
-                use: [
-                    {
-                        loader: "html-loader",
-                        options: { minimize: true }
-                    }
-                ]
-            }
-        ]
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        compress: true,
+        port: 8080,
     },
-    plugins: [
-        new HtmlWebPackPlugin({
-            template: "./src/index.html",
-            filename: "./index.html"
-        })
-    ]
-}
+};
