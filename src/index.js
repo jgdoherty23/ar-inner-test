@@ -1,5 +1,5 @@
 import * as THREE from "three";
-const OrbitControls = require("three-orbit-controls")(THREE)
+import oc from "three-orbit-controls";
 
 
 const scene = new THREE.Scene();
@@ -23,6 +23,7 @@ scene.add(cube);
 
 camera.position.z = 5;
 
+const OrbitControls = oc(THREE);
 var controls = new OrbitControls(camera, renderer.domElement);
 
 var animate = function () {
