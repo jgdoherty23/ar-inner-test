@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hello World</title>
+
+        <!-- Required for 8th Wall iFrame with World Tracking -->
+        <script src="//cdn.8thwall.com/web/iframe/iframe.js"></script>
+    </head>
+    <body>
+        <iframe 
+            id="content-iframe" 
+            src="https://8w.8thwall.app/inner-ar/"
+            frameBorder="0" 
+            scrolling="no"
+            allow="camera;microphone;gyroscope;accelerometer;xr-spatial-tracking;" 
+            allowfullscreen=""
+            style="height: 500px; width: 300px;"
+        >
+        </iframe>
+
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+window.XRIFrame.registerXRIFrame("content-iframe"),console.log("Hello!");
